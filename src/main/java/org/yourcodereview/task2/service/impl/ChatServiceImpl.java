@@ -38,8 +38,8 @@ public class ChatServiceImpl implements ChatService {
         List<User> allUsersById = userRepository.findAllById(incomingChatDataDto.getUsers());
 
         if (allUsersById.size() != incomingChatDataDto.getUsers().size()) {
-            throw new CreateChatException("ОШИБКА: Не все пользователи из: " + incomingChatDataDto.getUsers().toString() + " были найдены в БД! " +
-                    "Пользователи которых удалось найти в БД: " + allUsersById.toString());
+            throw new CreateChatException("ОШИБКА: Не все пользователи из: " + incomingChatDataDto.getUsers() + " были найдены в БД! " +
+                    "Пользователи которых удалось найти в БД: " + allUsersById);
         }
 
         newChat.setName(incomingChatDataDto.getName());

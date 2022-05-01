@@ -19,7 +19,6 @@ import java.util.List;
 public class MessageServiceImpl implements MessageService {
 
     private final ChatRepository chatRepository;
-    private final UserRepository userRepository;
     private final MessageRepository messageRepository;
 
     /**
